@@ -11,7 +11,7 @@
 	<title>FWI TS-Phone #</title>
 	<style>
 		.main {
-			width: 750px;
+			width: 400px;
 		}
 	</style>
   </head>
@@ -29,14 +29,12 @@
 	<table class="table table-dark">
 		<thead>
 		  <tr>
-			<th scope="col">#</th>
-			<th scope="col">First</th>
-			<th scope="col">Last</th>
-			<th scope="col">Handle</th>
+			<th scope="col">Name</th>
+			<th scope="col">PHone #</th>
 		  </tr>
 		</thead>
-		<tbody>
-		  <tr>
+		<tbody id="tbody">
+		  <!-- <tr>
 			<th scope="row">1</th>
 			<td>Mark</td>
 			<td>Otto</td>
@@ -53,7 +51,7 @@
 			<td>Larry</td>
 			<td>the Bird</td>
 			<td>@twitter</td>
-		  </tr>
+		  </tr> -->
 		</tbody>
 	  </table>
 
@@ -63,51 +61,51 @@
 		const contactList = [
   {
     name: "Austin Wiley",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "Sarah Wiley",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "Emmry Wiley",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "Haven Wiley",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "Ira Wiley",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "Austin Wiley",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "Chris christopherson",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "myly cyrus",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "poop plop",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "pee pee",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "butt sex",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   },
   {
     name: "dildo jammer",
-    Phone: "123-123-1234"
+    phone: "123-123-1234"
   }
 
   ]
@@ -116,15 +114,16 @@
 		console.log(contactList[0])
 
 
-		var table = document.createElement('table');
-for (var i = 1; i < 50; i++){
+		var table = document.getElementById('tbody');
+for (var i = 0; i < contactList.length; i++){
+	var person = contactList[i];
     var tr = document.createElement('tr');   
 
     var td1 = document.createElement('td');
     var td2 = document.createElement('td');
 
-    var text1 = document.createTextNode('Text1');
-    var text2 = document.createTextNode('Text2');
+    var text1 = document.createTextNode(person.name);
+    var text2 = document.createTextNode(person.phone);
 
     td1.appendChild(text1);
     td2.appendChild(text2);
@@ -133,7 +132,7 @@ for (var i = 1; i < 50; i++){
 
     table.appendChild(tr);
 }
-document.body.appendChild(table);
+document.tbody.appendChild(table);
 	</script>
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
