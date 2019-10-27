@@ -1,17 +1,142 @@
 <!doctype html>
-<style type="text/css">
-	#mainPopup {
-		padding: 10px;
-		height: 200px;
-		width: 400px;
-		font-family: Helvetica, Ubuntu, Arial, sans-serif;
-	}
-	h1 {
-		font-size: 2em;
-	}
-</style>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-<div id="mainPopup">
-<h1>Hello extensionizr!</h1>
-<p>To shut this popup down, edit the manifest file and remove the "default popup" key. To edit it, just edit ext/browser_action/browser_action.html. The CSS is there, too.</p>
-</div>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+	<title>FWI TS-Phone #</title>
+	<style>
+		.main {
+			width: 750px;
+		}
+	</style>
+  </head>
+  <body class="main">
+	<h1>FWI TS Phone #</h1>
+
+	<div class="input-group mb-3">
+			<input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="button-addon2">
+			<input type="text" class="form-control" placeholder="Phone #" aria-label="Phone #" aria-describedby="button-addon2">
+			<div class="input-group-append">
+			  <button class="btn btn-outline-secondary" type="button" id="button-addon2">New Contact</button>
+			</div>
+		  </div>
+	
+	<table class="table table-dark">
+		<thead>
+		  <tr>
+			<th scope="col">#</th>
+			<th scope="col">First</th>
+			<th scope="col">Last</th>
+			<th scope="col">Handle</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<th scope="row">1</th>
+			<td>Mark</td>
+			<td>Otto</td>
+			<td>@mdo</td>
+		  </tr>
+		  <tr>
+			<th scope="row">2</th>
+			<td>Jacob</td>
+			<td>Thornton</td>
+			<td>@fat</td>
+		  </tr>
+		  <tr>
+			<th scope="row">3</th>
+			<td>Larry</td>
+			<td>the Bird</td>
+			<td>@twitter</td>
+		  </tr>
+		</tbody>
+	  </table>
+
+    <!-- Optional JavaScript -->
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script>
+		const contactList = [
+  {
+    name: "Austin Wiley",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "Sarah Wiley",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "Emmry Wiley",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "Haven Wiley",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "Ira Wiley",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "Austin Wiley",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "Chris christopherson",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "myly cyrus",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "poop plop",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "pee pee",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "butt sex",
+    Phone: "123-123-1234"
+  },
+  {
+    name: "dildo jammer",
+    Phone: "123-123-1234"
+  }
+
+  ]
+
+
+		console.log(contactList[0])
+
+
+		var table = document.createElement('table');
+for (var i = 1; i < 50; i++){
+    var tr = document.createElement('tr');   
+
+    var td1 = document.createElement('td');
+    var td2 = document.createElement('td');
+
+    var text1 = document.createTextNode('Text1');
+    var text2 = document.createTextNode('Text2');
+
+    td1.appendChild(text1);
+    td2.appendChild(text2);
+    tr.appendChild(td1);
+    tr.appendChild(td2);
+
+    table.appendChild(tr);
+}
+document.body.appendChild(table);
+	</script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+  </body>
+</html>

@@ -1,8 +1,8 @@
 {
-  "name": "CHANGE THIS : Extension boilerplate",
+  "name": "Phone Book FWI",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "This extension was created with the awesome extensionizr.com",
+  "description": "This extension is a simple phone directory that you can edit",
   "homepage_url": "http://extensionizr.com",
   "icons": {
     "16": "icons/icon16.png",
