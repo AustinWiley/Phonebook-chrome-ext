@@ -1,12 +1,14 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<title>FWI TS-Phone #</title>
 	<style>
@@ -14,128 +16,129 @@
 			width: 400px;
 		}
 	</style>
-  </head>
-  <body class="main">
+</head>
+
+<body class="main">
 	<h1>FWI TS Phone #</h1>
 
 	<div class="input-group mb-3">
-			<input type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="button-addon2">
-			<input type="text" class="form-control" placeholder="Phone #" aria-label="Phone #" aria-describedby="button-addon2">
-			<div class="input-group-append">
-			  <button class="btn btn-outline-secondary" type="button" id="button-addon2">New Contact</button>
-			</div>
-		  </div>
-	
+		<input id="nameInput" type="text" class="form-control" placeholder="Name" aria-label="Name" aria-describedby="button-addon2">
+		<input id="phoneInput" type="text" class="form-control" placeholder="Phone #" aria-label="Phone #" aria-describedby="button-addon2">
+		<div class="input-group-append">
+			<button class="btn btn-outline-secondary" type="button" id="button-addon2">New Contact</button>
+		</div>
+	</div>
+
 	<table class="table table-dark">
 		<thead>
-		  <tr>
-			<th scope="col">Name</th>
-			<th scope="col">PHone #</th>
-		  </tr>
+			<tr>
+				<th scope="col">Name</th>
+				<th scope="col">PHone #</th>
+			</tr>
 		</thead>
 		<tbody id="tbody">
-		  <!-- <tr>
-			<th scope="row">1</th>
-			<td>Mark</td>
-			<td>Otto</td>
-			<td>@mdo</td>
-		  </tr>
-		  <tr>
-			<th scope="row">2</th>
-			<td>Jacob</td>
-			<td>Thornton</td>
-			<td>@fat</td>
-		  </tr>
-		  <tr>
-			<th scope="row">3</th>
-			<td>Larry</td>
-			<td>the Bird</td>
-			<td>@twitter</td>
-		  </tr> -->
+			<!-- names and numbers go here using js -->
 		</tbody>
-	  </table>
+	</table>
 
-    <!-- Optional JavaScript -->
+	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
 	<script>
-		const contactList = [
-  {
-    name: "Austin Wiley",
-    phone: "123-123-1234"
-  },
-  {
-    name: "Sarah Wiley",
-    phone: "123-123-1234"
-  },
-  {
-    name: "Emmry Wiley",
-    phone: "123-123-1234"
-  },
-  {
-    name: "Haven Wiley",
-    phone: "123-123-1234"
-  },
-  {
-    name: "Ira Wiley",
-    phone: "123-123-1234"
-  },
-  {
-    name: "Austin Wiley",
-    phone: "123-123-1234"
-  },
-  {
-    name: "Chris christopherson",
-    phone: "123-123-1234"
-  },
-  {
-    name: "myly cyrus",
-    phone: "123-123-1234"
-  },
-  {
-    name: "poop plop",
-    phone: "123-123-1234"
-  },
-  {
-    name: "pee pee",
-    phone: "123-123-1234"
-  },
-  {
-    name: "butt sex",
-    phone: "123-123-1234"
-  },
-  {
-    name: "dildo jammer",
-    phone: "123-123-1234"
-  }
+		const contactList = [{
+				name: "Austin Wiley",
+				phone: "123-123-1234"
+			},
+			{
+				name: "Sarah Wiley",
+				phone: "123-123-1234"
+			},
+			{
+				name: "Emmry Wiley",
+				phone: "123-123-1234"
+			},
+			{
+				name: "Haven Wiley",
+				phone: "123-123-1234"
+			},
+			{
+				name: "Ira Wiley",
+				phone: "123-123-1234"
+			},
+			{
+				name: "Austin Wiley",
+				phone: "123-123-1234"
+			},
+			{
+				name: "Chris christopherson",
+				phone: "123-123-1234"
+			},
+			{
+				name: "myly cyrus",
+				phone: "123-123-1234"
+			},
+			{
+				name: "poop plop",
+				phone: "123-123-1234"
+			},
+			{
+				name: "Soup eater",
+				phone: "123-123-1234"
+			},
+			{
+				name: "shelly mcmaster",
+				phone: "123-123-1234"
+			},
+			{
+				name: "fidor mangy",
+				phone: "123-123-1234"
+			}
 
-  ]
+		]
 
 
 		console.log(contactList[0])
 
 
 		var table = document.getElementById('tbody');
-for (var i = 0; i < contactList.length; i++){
-	var person = contactList[i];
-    var tr = document.createElement('tr');   
+		for (var i = 0; i < contactList.length; i++) {
+			var person = contactList[i];
+			var tr = document.createElement('tr');
 
-    var td1 = document.createElement('td');
-    var td2 = document.createElement('td');
+			var td1 = document.createElement('td');
+			var td2 = document.createElement('td');
 
-    var text1 = document.createTextNode(person.name);
-    var text2 = document.createTextNode(person.phone);
+			var text1 = document.createTextNode(person.name);
+			var text2 = document.createTextNode(person.phone);
 
-    td1.appendChild(text1);
-    td2.appendChild(text2);
-    tr.appendChild(td1);
-    tr.appendChild(td2);
+			td1.appendChild(text1);
+			td2.appendChild(text2);
+			tr.appendChild(td1);
+			tr.appendChild(td2);
 
-    table.appendChild(tr);
+			table.appendChild(tr);
+		}
+		// document.tbody.appendChild(table);
+
+		document.getElementById("button-addon2").addEventListener("click", displayDate);
+
+function displayDate() {
+//   document.getElementById("demo").innerHTML = Date();
+	var newName = document.getElementById("nameInput").value
+	var newPhone = document.getElementById("phoneInput").value
+	console.log(newName)
+	console.log(newPhone)
+	var newEntry = {
+		name: newName,
+		phone: newPhone
+	};
+
+	contactList.push(newEntry)
+	console.log(contactList)
 }
-document.tbody.appendChild(table);
 	</script>
-    <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-  </body>
+</body>
+
 </html>
