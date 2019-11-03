@@ -81,7 +81,7 @@ function reloadList() {
 function getContact() {
     //   document.getElementById("demo").innerHTML = Date();
     var newName = document.getElementById("nameInput").value.trim();
-    var newPhone = document.getElementById("phoneInput").value
+    var newPhone = document.getElementById("phoneInput").value.trim();
     console.log(newName)
     console.log(newPhone)
     var newEntry = {
@@ -90,6 +90,10 @@ function getContact() {
     };
     contactList.push(newEntry);
     console.log(contactList);
+
+    document.getElementById("nameInput").value = "";
+    document.getElementById("phoneInput").value = "";
+
     reloadList();
 };
 
