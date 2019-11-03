@@ -75,6 +75,7 @@ function loadlist() {
 function reloadList() {
     const myNode = document.getElementById("tbody");
     myNode.innerHTML = '';
+    loadlist();
 };
 
 // This function gets the new contact input and pushes it into the contacts array
