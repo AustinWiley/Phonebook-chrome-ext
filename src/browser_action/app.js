@@ -71,10 +71,16 @@ function loadlist() {
     };
 };
 
+// THis funtion Empties the table so it can be rewritten
+function reloadList() {
+    const myNode = document.getElementById("tbody");
+    myNode.innerHTML = '';
+};
+
 // This function gets the new contact input and pushes it into the contacts array
 function getContact() {
     //   document.getElementById("demo").innerHTML = Date();
-    var newName = document.getElementById("nameInput").value
+    var newName = document.getElementById("nameInput").value.trim();
     var newPhone = document.getElementById("phoneInput").value
     console.log(newName)
     console.log(newPhone)
@@ -82,14 +88,9 @@ function getContact() {
         name: newName,
         phone: newPhone
     };
-    contactList.push(newEntry)
-    console.log(contactList)
-};
-
-// THis funtion Empties the table so it can be rewritten
-function reloadList() {
-    const myNode = document.getElementById("tbody");
-    myNode.innerHTML = '';
+    contactList.push(newEntry);
+    console.log(contactList);
+    reloadList();
 };
 
 //document.tbody.appendChild(table);
